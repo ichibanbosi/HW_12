@@ -1,0 +1,20 @@
+version: "3.3"
+services:
+  bd:
+    image: mysql
+    restart: always
+    volumes:
+      - ./tmp/db:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: test
+      MYSQL_ROOT_PASSWORD: 22222222
+    ports:
+      - "3306:3306"
+
+  tomcat:
+    image: ivangelion/dor_hw_12
+    ports:
+      - "5555:8080"
+    depends_on:
+      - bd
+
