@@ -12,7 +12,7 @@ services:
       - "3306:3306"
 
   tomcat:
-    image: ivangelion/for_hw:v4
+    image: ivangelion/for_hw:v5
     ports:
       - "5555:8080"
     depends_on:
