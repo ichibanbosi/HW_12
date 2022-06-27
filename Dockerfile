@@ -2,7 +2,7 @@ FROM alpine:latest
 RUN apk update && \
 apk add maven openjdk11 git
 RUN git clone https://github.com/ichibanbosi/for_HW_12.git && cd for_HW_12
-WORKDIR /boxfuse-sample-java-war-hello
+WORKDIR /for_HW_12
 RUN mvn package
 RUN cp /for_HW_12/target/App42PaaS-Java-MySQL-Sample-0.0.1-SNAPSHOT.war /mnt
 
